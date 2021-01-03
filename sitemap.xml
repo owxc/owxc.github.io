@@ -12,10 +12,10 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/git/</loc>
-    <lastmod>2017-06-28</lastmod>
+    <loc>/archives/git/</loc>
+    <lastmod>2020-06-28</lastmod>
     <changefreq>always</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
 </url>
 
 <url>
