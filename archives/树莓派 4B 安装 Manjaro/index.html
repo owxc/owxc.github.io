@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="english">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Maverick,OWXC,Galileo,blog" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="owxcBlogUnderConstruction &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="owxcBlogUnderConstruction &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="/assets/galileo-8d8763e752.css">
+    <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "/1211652b49da1160af6b9c4c4ed40d60.json"
+        }
+    </script>
+    
+<title>树莓派 4B 安装 Manjaro - owxcBlogUnderConstruction</title>
+<meta name="author" content="owxc" />
+<meta name="description" content="树莓派 4B 安装 Manjaro" />
+<meta property="og:title" content="树莓派 4B 安装 Manjaro - owxcBlogUnderConstruction" />
+<meta property="og:description" content="树莓派 4B 安装 Manjaro" />
+<meta property="og:site_name" content="owxcBlogUnderConstruction" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/%E6%A0%91%E8%8E%93%E6%B4%BE%204B%20%E5%AE%89%E8%A3%85%20Manjaro/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-12-27T16:12:53+08.00" />
+<meta name="twitter:title" content="树莓派 4B 安装 Manjaro - owxcBlogUnderConstruction" />
+<meta name="twitter:description" content="树莓派 4B 安装 Manjaro" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">owxcBlogUnderConstruction</a></h1>
+                        <p>This is Maverick, Theme Galileo.</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">Home</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">Archives</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">About</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">Search</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">树莓派 4B 安装 Manjaro</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>owxc</span>
+                <time>
+                    2020-12-27
+                </time>
+                
+                in <a no-style class="category" href="/category/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
+                    嵌入式
+                </a>
+                
+                
+                <span class="leancloud_visitors" 
+                    id="/archives/%E6%A0%91%E8%8E%93%E6%B4%BE%204B%20%E5%AE%89%E8%A3%85%20Manjaro/" 
+                    data-flag-title="树莓派 4B 安装 Manjaro"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
+            </span>
+            <div class="ga-content_body">
+                <h1>树莓派 4B 安装 Manjaro</h1>
+<p>[toc]</p><h2>Manjaro/Arch常用命令</h2>
+<ul>
+<li><a href="https://www.jianshu.com/p/ea651cdc5530">Pacman常用命令 - 简书</a></li>
+<li>也是安装过程，还有一些mnjro的使用经验<a href="https://blog.csdn.net/qq_35872856/article/details/104672914">Raspberry Pi 4B的Linux游记（二）：Manjaro ARM的安装和配置_浮生一城的技术手记-CSDN博客</a></li>
+<li>一些其他的linux运维技巧：<a href="https://www.jianshu.com/p/874405b0a6ae">nmap基本使用方法 - 简书</a></li>
+</ul>
+<h2>安装</h2>
+<ul>
+<li>下载地址<a href="https://osdn.net/projects/manjaro-arm/storage/rpi4/xfce/">Downloading File /rpi4/xfce - Manjaro ARM - OSDN</a></li>
+<li>【首选】安装步骤和Manjaro的简介；<a href="https://www.jianshu.com/p/1931fd6bd3e9">树莓派4b安装 manjaro-arm - 简书</a></li>
+<li>【主要参照】<a href="https://juejin.cn/post/6844904158886101005#heading-27">树莓派4B上手体验-安装Manjaro-ARM-xfce(无屏幕)</a><ul>
+<li><a href="https://blog.csdn.net/weixin_44338780/article/details/108144142">树莓派4安装64位系统 Manjaro(无屏幕)_12218的博客-CSDN博客</a></li>
+</ul>
+</li>
+</ul>
+<h2>ref</h2>
+<ul>
+<li><a href="https://blog.csdn.net/weixin_45599654/article/details/109097748">树梅派4B 安装使用 Manjaro-ARM 64位系统 samba tigervnc iptables防火墙_一切时空, 过去未来-CSDN博客</a></li>
+</ul>
+<h2>步骤</h2>
+<h3>基本工具包安装</h3>
+<div class="highlight"><pre><span></span>sudo pacman-mirrors --country China    <span class="c1"># 换源</span>
+sudo pacman -Syu    <span class="c1"># 系统更新，manjaro是滚动更新方式，第一次更新很大，但一定要更新</span>
+
+sudo pacman -Sy neovim    <span class="c1"># neovim，vim的新版</span>
+reboot    <span class="c1"># 重启树莓派</span>
+
+sudo pacman -Sy base-devel <span class="c1"># gcc等</span>
+sudo pacman -Sy gdb
+sudo pacman -Sy glibc
+sudo pacman -Sy cmake
+
+<span class="c1"># llvm 系</span>
+sudo pacman -S clang
+sudo pacman -S lldb
+
+sudo pacman -S code
+</pre></div>
+<h3>配置无线</h3>
+<ul>
+<li>Mnjro/Arch的软件是很新，但是各种配置的迭代也比较块；比如网络这里就有许多套配置的工具和流程：ip和iw/iwconfig/iwctl/wifi-menu命令；netctl命令；nmcli/nmtui/NetworkManager；wpa-cli<ul>
+<li>这里还没完全明白；</li>
+<li><a href="https://jingyan.baidu.com/article/48b37f8dd4ecb31a64648819.html">如何在Arch的终端设定WiFi网络-百度经验</a></li>
+<li><a href="https://www.cnblogs.com/LicwStack/p/4972689.html">通过命令行连接Wifi - Hello_2018 - 博客园</a></li>
+<li><a href="https://blog.csdn.net/rengar_yang/article/details/107157155">Linux中的网络配置（一） ---ifconfig和ip addr（临时设定ip）、图形方式永久设定ip、nmcli的用法（命令设定ip）、管理网络配置文件以及dhcp服务配置_Rengar_Yang的博客-CSDN博客</a></li>
+</ul>
+</li>
+<li>比起使用wpa_supplicant，manjaro可以使用nmcli（network manager）管理有线和无线网络；</li>
+</ul>
+<p>或者使用nmtui，使用命令行下的界面；</p><div class="highlight"><pre><span></span>sudo pacman -Syu netctl <span class="c1"># 安装netctl</span>
+sudo cp /etc/netctl/examples/wireless-wpa /etc/netctl/myConfig  <span class="c1"># 依据样例创建一个配置脚本文件</span>
+sudo nano /etc/netctl/myConfig <span class="c1"># 按格式写要连的wifi名和密码</span>
+<span class="c1"># 确保安装了wpa_actiond，如果没有安装使用 yay -S wpa_actiond</span>
+<span class="c1"># 执行上面这条命令需要安装基本的编译构建环境和yay</span>
+
+sudo systemctl <span class="nb">enable</span> netctl-auto@wlan0.service <span class="c1"># 将自动连接wifi启动为服务</span>
+</pre></div>
+<p>以上from：<a href="https://unix.stackexchange.com/questions/378710/manjaro-connect-ssh-wifi-before-log-in">networkmanager - Manjaro Connect SSH &amp; Wifi before log in - Unix &amp; Linux Stack Exchange</a></p><ul>
+<li>【要看一下】<a href="https://unix.stackexchange.com/questions/80470/arch-linux-wifi-works-manually-how-to-make-it-automatic/83108#83108">Arch linux wifi works manually, how to make it automatic? - Unix &amp; Linux Stack Exchange</a></li>
+<li><a href="https://www.cnblogs.com/vachester/p/5637027.html">Archlinux无线联网教程 - va_chester - 博客园</a></li>
+</ul>
+<h3>VNC</h3>
+<ul>
+<li>打开和关闭Desktop服务：【TODO】</li>
+<li>VNC配置</li>
+</ul>
+<p>还需要一个VNC客户端或者叫viewer，可以使用VNCviewer软件，其实MobaXTerm也有VNC功能很好用；</p><p>Settings -- 桌面 -- 图标 -- （桌面）图标大小=50px；字体大小=16px；</p><p>Settings -- 面板首选项 -- （面板/任务栏）行大小=50px</p><p>Settings -- 外观 -- 字体 -- （界面其他内容）字体大小=16px；</p><p>Settings -- 窗口管理器 -- （程序窗口标题）字体大小=16px；</p><p>Settings -- LightDM桌面管理器 -- 字体大小=16px；</p><p>任务栏通知区域右键 -- 属性 -- 最大图标大小=32px；方形图标；</p>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/%E5%B7%A5%E5%85%B7/">#工具</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>No More</h3>
+        <p class="yue">This is the latest one.</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/git/">GitNote</a>
+        <p class="yue">git使用技巧</p>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "IKRAfuPq0zrz6Wfje8ahHAIP-gzGzoHsz", "appKey": "lFaCWkd4xCs0Ng5UWs1eHNwU", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">owxcBlogUnderConstruction</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2021 owxc</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/AlanDecode" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/AlanDecode" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="https://weibo.com/5245109677/" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2019-12-06T12:00+08:00"
+                    </script>
+                    <script src="/assets/galileo-7c8cea54ab.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="/assets/ExSearch/jquery.min.js"></script>
+    <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>
